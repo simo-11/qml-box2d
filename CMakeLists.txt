@@ -53,6 +53,12 @@ if(NOT Qt6_FOUND)
 endif()
 
 message(STATUS "Using ${QT_MAJOR_VERSION}")
+qt_policy(
+	SET QTP0001 NEW
+)
+cmake_policy(
+	SET CMP0071 NEW
+)
 
 if(BUILD_SHARED_LIBS)
   set(QML_PLUGIN_LINK_TYPE SHARED)
