@@ -21,7 +21,9 @@
 # 3. This notice may not be removed or altered from any source distribution.
 #
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
-project(qmlbox2d)
+project(qmlbox2d VERSION 1.0.0 LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -44,7 +46,8 @@ option(BUILD_SHARED_LIBS "Build qml-box2d as a shared lib" ON)
 set(QT_MAJOR_VERSION Qt6)
 
 if(USE_QT6)
-  find_package(Qt6 6.2 COMPONENTS Quick Core Qml)
+  find_package(Qt6 COMPONENTS Quick Core Qml)
+  qt_standard_project_setup(REQUIRES 6.5)
 endif()
 
 if(NOT Qt6_FOUND)
