@@ -1,4 +1,4 @@
-# Summary of changes
+# Summary of changes to use with Qt 6.6
 
 ## cmake
 
@@ -10,7 +10,6 @@ qt_policy(
 cmake_policy(
 	SET CMP0071 NEW
 )
-
 ```
 
 ### building
@@ -18,10 +17,11 @@ cmake_policy(
 > cmake "-DCMAKE_PREFIX_PATH=C:\Qt\6.6.2\msvc2019_64" -S ..
 ```
 
+## sources
+ - box2dplugin.h - commented Q_OBJECT away as it caused unsatisfied symbol error on link
+ - cannon/main.qml - remove versio from import QtMultimedia
+
 # Running examples
 ```
 C:\Users\simon\github\qml-box2d\build [master ≡]> bin\Debug\box2qml-examples.exe
-qrc:/accelerometer/accelerometer.qml:3:1: module "QtSensors" is not installed
-qrc:/accelerometer/accelerometer.qml:3:1: module "QtSensors" is not installed
-qrc:/cannon/main.qml:4:1: module "QtMultimedia" is not installed
 ```
