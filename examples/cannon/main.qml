@@ -1,7 +1,7 @@
 import QtQuick 2.2
 import QtQuick.Controls 2.2
 import Box2D 2.0
-import QtMultimedia 5.0
+import QtMultimedia
 import "../shared"
 
 Rectangle {
@@ -367,7 +367,4 @@ Rectangle {
         visible: false
         z: 1
     }
-
-    SoundEffect { id: shotSound; source: "sounds/cannon.wav" }
-    SoundEffect { id: gearSound; source: "sounds/gear.wav" }
 }
