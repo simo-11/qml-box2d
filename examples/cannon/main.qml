@@ -367,4 +367,7 @@ Rectangle {
         visible: false
         z: 1
     }
+
+    SoundEffect { id: shotSound; source: "sounds/cannon.wav" }
+    SoundEffect { id: gearSound; source: "sounds/gear.wav" }
 }
