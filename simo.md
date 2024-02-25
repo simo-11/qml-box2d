@@ -14,7 +14,7 @@ cmake_policy(
 
 ### building
 ```
-> cmake "-DCMAKE_PREFIX_PATH=C:\Qt\6.6.2\msvc2019_64" -S ..
+qml-box2d\build> cmake "-DCMAKE_PREFIX_PATH=C:\Qt\6.6.2\msvc2019_64" -S ..
 ```
 
 ## sources
